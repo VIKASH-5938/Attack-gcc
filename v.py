@@ -164,8 +164,7 @@ async def attack(update: Update, context: CallbackContext):
         f"*🚀 𝗔𝗧𝗧𝗔𝗖𝗞 𝗟𝗔𝗨𝗡𝗖𝗛𝗘𝗗!*\n"
         f"*🎯 Target Locked: {ip}:{port}*\n"
         f"*⏳ Countdown: {duration} seconds*\n"
-        f"*📅 𝗦𝘁𝗮𝗿𝘁𝗲𝗱 :- {current_time}*\n\n"
-        f"*📈 𝗔𝘁𝘁𝗮𝗰𝗸 𝘀𝘁𝗮𝘁𝘂𝘀 :- 𝗔𝘁𝘁𝗮𝗰𝗸 𝗶𝗻 𝗽𝗿𝗼𝗴𝗿𝗲𝘀𝘀...*"
+        f"*🔥chudai chalu h feedback bhej dena @DarkDdosOwner💥*"
     ),
     parse_mode='Markdown'
 )
@@ -189,7 +188,7 @@ async def run_attack(chat_id, ip, port, duration, context):
     except Exception as e:
         await context.bot.send_message(chat_id=chat_id, text=f"*⚠️ Error during the attack: {str(e)}*", parse_mode='Markdown')
     finally:
-        await context.bot.send_message(chat_id=chat_id, text="*✅ 𝗔𝗧𝗧𝗔𝗖𝗞 𝗖𝗢𝗠𝗣𝗟𝗘𝗧𝗘𝗗 𝗦𝗨𝗖𝗖𝗘𝗦𝗦𝗙𝗨𝗟𝗟𝗬 ✅\n𝗘𝗻𝗱𝗲𝗱 :- {current_time}\n📈 𝗔𝘁𝘁𝗮𝗰𝗸 𝘀𝘁𝗮𝘁𝘂𝘀 :- Attack Completely sussfully*", parse_mode='Markdown')
+        await context.bot.send_message(chat_id=chat_id, text="*✅ 𝗔𝗧𝗧𝗔𝗖𝗞 𝗖𝗢𝗠𝗣𝗟𝗘𝗧𝗘𝗗 𝗦𝗨𝗖𝗖𝗘𝗦𝗦𝗙𝗨𝗟𝗟𝗬 ✅\n😈Bas maal gir gya! 💦💦💦*\n*BGMI KO CHODNE WALE FEEDBACK DE @DarkDdosOwner!*", parse_mode='Markdown')
 
 async def generate_redeem_code(update: Update, context: CallbackContext):
     user_id = update.effective_user.id
