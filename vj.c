@@ -7,7 +7,7 @@
 #include <time.h>
 
 #define BUFFER_SIZE 1024
-#define NUM_THREADS 180  // Number of threads to send UDP packets
+#define NUM_THREADS 35  // Number of threads to send UDP packets
 #define EXPIRY_FLAG_FILE "expired.flag"
 
 typedef struct {
