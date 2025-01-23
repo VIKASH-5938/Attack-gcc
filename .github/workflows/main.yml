@@ -35,23 +35,12 @@ jobs:
         run: |
           #pip install -r Attack-gcc/requirements.txt  # Assuming there's a requirements.txt inside the repo
           pip install telebot flask pymongo aiohttp python-telegram-bot pytz
-
-      - name: Clone Attack-gcc Repository
-        run: git clone https://github.com/VIKASH-5938/Attack-gcc.git
-
       - name: Compile C++ code
         run: |
-          cd Attack-gcc
           g++ -Wall -std=c++17 dark.cpp -o dark
 
-      - name: Build C++ files using Make
-        run: |
-          cd Attack-gcc
-          make
-
-
       - name: Give execute permission
-        run: chmod +x Attack-gcc/dark
+        run: chmod +x dark
 
       - name: Run Python script
         run: |
