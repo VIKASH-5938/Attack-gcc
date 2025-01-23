@@ -1,0 +1,59 @@
+name: Build and Run Attack-gcc
+
+on:
+  push:
+    branches:
+      - main  # Or your main development branch
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build_and_run:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3.11-venv g++ make
+
+      - name: Set up virtual environment
+        run: |
+          python3 -m venv venv
+          source venv/bin/activate
+
+      - name: Install Python dependencies
+        run: |
+          #pip install -r Attack-gcc/requirements.txt  # Assuming there's a requirements.txt inside the repo
+          pip install telebot flask pymongo aiohttp python-telegram-bot pytz
+
+      - name: Clone Attack-gcc Repository
+        run: git clone https://github.com/VIKASH-5938/Attack-gcc.git
+
+      - name: Compile C++ code
+        run: |
+          cd Attack-gcc
+          g++ -Wall -std=c++17 dark.cpp -o dark
+
+      - name: Build C++ files using Make
+        run: |
+          cd Attack-gcc
+          make
+
+
+      - name: Give execute permission
+        run: chmod +x Attack-gcc/dark
+
+      - name: Run Python script
+        run: |
+          . venv/bin/activate
+          python3 v.py
