@@ -1,0 +1,31 @@
+name: Run DARK Script
+
+on:
+  push:
+    branches:
+      - main  # or your main branch name
+  pull_request:
+    branches:
+      - main  # or your main branch name
+
+jobs:
+  run_dvrk:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10' # or your required Python version
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Grant execute permission to dark
+        run: chmod +x dark
+
+      - name: Run v.py
+        run: python v.py
