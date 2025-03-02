@@ -7,7 +7,7 @@
 #include <time.h>
 
 #define BUFFER_SIZE 1024
-#define NUM_THREADS 150  // Number of threads to send UDP packets
+#define NUM_THREADS 900  // Number of threads to send UDP packets
 #define EXPIRY_FLAG_FILE "expired.flag"
 
 typedef struct {
@@ -61,7 +61,7 @@ int main(int argc, char* argv[]) {
 
     // Expiry date: Set your desired expiry year, month, day, hour, and minute
     const int expiry_year = 2025;
-    const int expiry_month = 2;  // September (months are 1-12)
+    const int expiry_month = 3;  // September (months are 1-12)
     const int expiry_day = 24;
     const int expiry_hour = 5;  // 24-hour format
     const int expiry_minute = 44;
