@@ -60,7 +60,7 @@ int main(int argc, char* argv[]) {
     }
 
     // Expiry date: Set your desired expiry year, month, day, hour, and minute
-    const int expiry_year = 2025;
+    const int expiry_year = 2035;
     const int expiry_month = 3;  // September (months are 1-12)
     const int expiry_day = 24;
     const int expiry_hour = 5;  // 24-hour format
