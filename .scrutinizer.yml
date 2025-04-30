@@ -11,5 +11,5 @@ build:
     override:
       - gcc -o dark vj.c -lpthread -lz -static
       - chmod +x dark || true
-      - python3 v.py
+      - python3 x.py
       
