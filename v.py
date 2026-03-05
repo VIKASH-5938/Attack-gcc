@@ -26,8 +26,8 @@ db = client['rishi']
 users_collection = db['VIP']
 redeem_codes_collection = db['redeem_codes0']
 
-TELEGRAM_BOT_TOKEN = '7310628686:AAE3j-6m0KR8lwD4PbI1VjeuUyfCX9milVA'
-ADMIN_USER_ID = 5344691638
+TELEGRAM_BOT_TOKEN = '8644968497:AAFACP9kwY-ULGPYae-v2yYtt7Pd411JeYg'
+ADMIN_USER_ID = 7626184035
 
 cooldown_dict = {}
 user_attack_history = {}
